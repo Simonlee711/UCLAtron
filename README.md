@@ -53,7 +53,7 @@ python main.py \
 
 ### Notes
 Notes and Next Steps
-- Better “Negative” Distillation Criteria: The simplistic approach in negative_distillation.py penalizes matching teacher logits on concept-related examples. In practice, you might design more nuanced objectives (e.g., mask out certain logits, remove partial attention to concept tokens, or freeze certain layers).
-- Probe Training: To truly verify forgetting, you’d build a small supervised probe to detect if the “negative concept” is still encoded in the latent representations.
+- Better “Negative” Distillation Criteria: The simplistic approach in negative_distillation.py penalizes matching teacher logits on concept-related examples. In practice, we might design more nuanced objectives (e.g., mask out certain logits, remove partial attention to concept tokens, or freeze certain layers).
+- Probe Training: To truly verify forgetting, we’d build a small supervised probe to detect if the “negative concept” is still encoded in the latent representations.
 - Membership Inference: Implementing a real membership inference attack requires creating an “attack model” to guess if a sample was in the training set.
-- Progressive Forgetting: If you need multi-step forgetting (e.g., Teacher1 -> Student1 -> Teacher2 -> Student2, etc.), you can adapt the skeleton to chain these steps and keep track of intermediate models.
+- Progressive Forgetting: If we need multi-step forgetting (e.g., Teacher1 -> Student1 -> Teacher2 -> Student2, etc.), we can adapt the skeleton to chain these steps and keep track of intermediate models.
